@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Handwriting -->
+    <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Harvey-Smith Menu</title>
+</head>
+
+<body>
+    <nav id="nav">
+        <svg onclick="closeMenu()" id="close" class="close" width="30" height="30" viewbox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M7.5 22.5L22.5 7.5M7.5 7.5L22.5 22.5" stroke="#111827" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+        <ol>
+            <li><a href="./1-index.html">Home</a></li>
+            <li><a href="./2-menu.html">Wedding Breakfast</a></li>
+            <li><a href="./3-choices.html">Your Choices</a></li>
+            <li><a href="./4-logistics.html">Logistics</a></li>
+            <li><a href="./5-noShow.html">Can't Make It?</a></li>
+        </ol>
+    </nav>
+    <header>
+        <div class="banner">
+            <span class="married">we're getting married!</span>
+        </div>
+        <svg onclick="openMenu()" id="menu" class="menu" width="30" height="30" viewbox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M5 7.5H25M5 15H25M5 22.5H25" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
+        </svg>
+        <div class="photo-container">
+            <img class="photo" id="photo1" src="./photos/photo5.png">
+            <img class="title" src="./titles/title5.png">
+        </div>
+    </header>
+    <main>
+        <form id="noShowForm" class="noShow-group">
+            <section class="noShow">
+                <h1>Details</h1>
+                <input id="fName" placeholder="First Name" type="text" required>
+                <input id="lName" placeholder="Last Name" type="text" required>
+            </section>
+            <p class="sorry">We're sorry you can't make it.<br>Please, let us know as soon as you can.</p>
+            <input id="no" type="submit" value="SEND">
+        </form>
+    </main>
+    <footer>Contact Us: harveysmith0218@gmail.com</footer>
+    <script src="./script.js"></script>
+    <script src="./noShow.js"></script>
+</body>
+
+</html>

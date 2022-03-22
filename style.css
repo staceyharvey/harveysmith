@@ -1,0 +1,430 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --pink: #D6336C;
+    --yellow: #FCC419;
+    --white: #FFFFFF;
+    --grey: #ADB5BD;
+    --black: #495057;
+    --cursive: 'Back to Black Demo';
+    --handwriting: 'Architects Daughter';
+    --sansserif: 'Fredoka';
+}
+
+html {
+    font-size: 62.5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--yellow);
+}
+
+body {
+    background-color: var(--pink);
+    height: 100vh;
+    max-width: 41.5rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: var(--sansserif);
+}
+
+
+/* ########## NAV ########## */
+
+nav {
+    display: none;
+    position: absolute;
+    z-index: 100;
+    width: 100%;
+    height: 100%;
+    background-color: var(--white);
+    padding: 30vh 0;
+    animation: slideIn 1s;
+}
+
+.slideOut {
+    animation: slideOut 1s linear 1;
+}
+
+@keyframes slideIn {
+    0% {
+        right: -42rem;
+    }
+    100% {
+        right: 0;
+    }
+}
+
+@keyframes slideOut {
+    0% {
+        right: 0;
+    }
+    100% {
+        right: -41rem;
+    }
+}
+
+.clear {
+    height: 20rem;
+}
+
+.line-break {
+    display: block;
+}
+
+
+/* ########## ALL ########## */
+
+header {
+    width: 100%;
+}
+
+.banner {
+    position: fixed;
+    top: 0.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 24.5rem;
+    height: 3rem;
+    border-top-left-radius: 0.7rem;
+    border-top-right-radius: 0.3rem;
+    border-bottom-right-radius: 0.3rem;
+    border-bottom-left-radius: 0.7rem;
+    clip-path: polygon(100% 0, 100% 100%, 0% 100%, 14% 49%, 0% 0%);
+    background-color: var(--yellow);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.married {
+    font-family: var(--handwriting);
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    color: var(--white);
+    padding-left: 1rem;
+    -webkit-text-stroke: 0.05rem #fff;
+}
+
+.menu,
+.close {
+    position: absolute;
+    top: 0.5rem;
+    right: 1rem;
+    cursor: pointer;
+}
+
+.burger {
+    height: 3rem;
+}
+
+ol {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 1.6rem;
+    font-weight: 600;
+}
+
+ol>li {
+    list-style: none;
+    cursor: pointer;
+    width: 100%;
+    text-align: center;
+    height: 8vh;
+    line-height: 8vh;
+}
+
+a {
+    text-decoration: none;
+    color: var(--pink);
+}
+
+.photo-container {
+    position: relative;
+    margin-top: 4rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.photo {
+    width: 100%;
+}
+
+.title {
+    height: 7rem;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 50%);
+}
+
+main {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 3.5rem;
+}
+
+h1 {
+    font-size: 1.8rem;
+}
+
+h1,
+h2 {
+    text-align: center;
+    font-family: var(--sansserif);
+    text-transform: uppercase;
+    color: var(--white);
+    font-weight: 600;
+}
+
+.title-conatiner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    padding-bottom: 1.5rem;
+    color: var(--white);
+}
+
+
+/* ########## BUTTONS ########## */
+
+.btn {
+    text-align: center;
+}
+
+button {
+    all: unset;
+    font-family: var(--handwriting);
+    font-size: 1.8rem;
+    color: var(--white);
+    text-transform: uppercase;
+    padding: 0.5rem 1rem;
+    border: var(--white) 0.3rem solid;
+    border-radius: 0.1rem;
+    cursor: pointer;
+    box-shadow: rgba(73, 80, 87, 0.5) 0 0.4rem 0.5rem;
+}
+
+button:hover {
+    transform: scale(103%);
+    -webkit-text-stroke: 0.05rem #fff;
+}
+
+button:active {
+    box-shadow: rgba(73, 80, 87, 0.5) 0 0.2rem 0.3rem;
+    transform: translateY(0.2rem);
+}
+
+
+/* ########## FORMS ########## */
+
+input[type="text"] {
+    color: var(--black);
+    text-transform: capitalize;
+}
+
+input[type="text"],
+select {
+    outline: none;
+    padding-left: 1rem;
+    border-radius: 100rem;
+    color: var(--black);
+    height: 2.5rem;
+    width: 100%;
+    border: none;
+}
+
+input[type="submit"] {
+    all: unset;
+    font-family: var(--handwriting);
+    font-size: 1.8rem;
+    color: var(--white);
+    text-transform: uppercase;
+    padding: 0.5rem 1rem;
+    border: var(--white) 0.3rem solid;
+    border-radius: 0.1rem;
+    cursor: pointer;
+    box-shadow: rgba(73, 80, 87, 0.5) 0 0.4rem 0.5rem;
+}
+
+input[type="submit"]:hover {
+    transform: scale(103%);
+    -webkit-text-stroke: 0.05rem #fff;
+}
+
+input[type="submit"]:active {
+    box-shadow: rgba(73, 80, 87, 0.5) 0 0.2rem 0.3rem;
+    transform: translateY(0.2rem);
+}
+
+input[type="submit"].sent {
+    cursor: not-allowed;
+    background-color: #20c997;
+    box-shadow: none;
+}
+
+input[type="submit"].sent:hover {
+    transform: scale(100%);
+    -webkit-text-stroke: 0;
+}
+
+input[type="submit"].sent:active {
+    box-shadow: none;
+    transform: translateY(0rem);
+}
+
+
+/* ########## 1-INDEX ########## */
+
+.heading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer {
+    background-image: url(./photos/photo6.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 20rem;
+    position: absolute;
+    bottom: 0;
+}
+
+.barns {
+    height: 7rem;
+}
+
+h2 {
+    margin-top: 0.5rem;
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+}
+
+.rings {
+    margin: 0 1rem;
+}
+
+.sup {
+    text-transform: lowercase;
+    font-size: 1.2rem;
+    vertical-align: super;
+}
+
+
+/* ########## 2-MENU ########## */
+
+ul {
+    margin-top: 0.5rem;
+    font-size: 1.4rem;
+    color: var(--white);
+}
+
+
+/* ########## 3-CHOICES ########## */
+
+.meal-p {
+    width: 80%;
+    margin-bottom: 3%;
+}
+
+.columns {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    height: 100%;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 2rem;
+    align-items: center;
+    height: 100%;
+}
+
+.food-form {
+    width: 100%;
+    height: 90%;
+    margin-bottom: 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form-group {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+
+/* ########## 4-LOGISTICS ########## */
+
+.info {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+    align-items: center;
+}
+
+.logistics {
+    width: 70%;
+}
+
+p {
+    margin-top: 0.6rem;
+    text-align: center;
+    color: var(--white);
+    font-size: 1.6rem;
+}
+
+
+/* ########## 5-NO SHOW ########## */
+
+.noShow-group {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.noShow {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.sorry {
+    width: 80%;
+}

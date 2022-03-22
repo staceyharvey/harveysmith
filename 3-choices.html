@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Handwriting -->
+    <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Harvey-Smith Menu</title>
+</head>
+
+<body>
+    <nav id="nav">
+        <svg onclick="closeMenu()" id="close" class="close" width="30" height="30" viewbox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M7.5 22.5L22.5 7.5M7.5 7.5L22.5 22.5" stroke="#111827" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <ol>
+            <li><a href="./1-index.html">Home</a></li>
+            <li><a href="./2-menu.html">Wedding Breakfast</a></li>
+            <li><a href="./3-choices.html">Your Choices</a></li>
+            <li><a href="./4-logistics.html">Logistics</a></li>
+            <li><a href="./5-noShow.html">Can't Make It?</a></li>
+        </ol>
+    </nav>
+    <header>
+        <div class="banner">
+            <span class="married">we're getting married!</span>
+        </div>
+        <svg onclick="openMenu()" id="menu" class="menu" width="30" height="30" viewbox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M5 7.5H25M5 15H25M5 22.5H25" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
+        </svg>
+        <div class="photo-container">
+            <img class="photo" id="photo1" src="./photos/photo3.png">
+            <img class="title" src="./titles/title3.png">
+        </div>
+    </header>
+    <main>
+        <form id="food-form" name="food-form" class="food-form">
+            <p class="meal-p">Please, let us know your preferred meal on the day. Once the form is complete, we know you're coming :)</p>
+            <section class="columns">
+                <section class="column">
+                    <div class="form-group">
+                        <h1>Guest One</h1>
+                        <input id="first1" name="first1" type="text" placeholder="First Name" required>
+                        <input id="last1" name="last1" type="text" placeholder="Last Name" required>
+                    </div>
+                    <div class="form-group">
+                        <h1>Meal</h1>
+                        <select id="starter1" required>
+                        <option value="" disabled selected>Select your option</option>
+                        <option id="starter1-1">Lentil</option>
+                        <option id="starter2-1">Tomato</option>
+                        <option id="starter3-1">Leek</option>
+                    </select>
+                        <select id="main1" required>
+                        <option value="" disabled selected>Select your option</option>
+                        <option id="main1-1">Chicken</option>
+                        <option id="main2-1">Beef</option>
+                        <option id="main3-1">Lamb</option>
+                    </select>
+                        <select id="dessert1" required>
+                        <option value="" disabled selected>Select your option</option>
+                        <option id="dessert1-1">Strawberry</option>
+                        <option id="dessert2-1">Chocolate</option>
+                        <option id="dessert3-1">Vanilla</option>
+                    </select>
+                    </div>
+                </section>
+                <section class="column">
+                    <div class="form-group">
+                        <h1>Guest Two</h1>
+                        <input id="first2" name="first2" type="text" placeholder="First Name" required>
+                        <input id="last2" name="last2" type="text" placeholder="Last Name" required>
+                    </div>
+                    <div class="form-group">
+                        <h1>Meal</h1>
+                        <select id="starter2" required>
+                        <option value="" disabled selected>Select your option</option>
+                        <option id="starter1-2">Lentil</option>
+                        <option id="starter2-2">Tomato</option>
+                        <option id="starter3-2">Leek</option>
+                    </select>
+                        <select id="main2" required>
+                        <option value="" disabled selected>Select your option</option>
+                        <option id="main1-2">Chicken</option>
+                        <option id="main2-2">Beef</option>
+                        <option id="main3-2">Lamb</option>
+                    </select>
+                        <select id="dessert2" required>
+                        <option value="" disabled selected>Select your option</option>
+                        <option id="dessert1-2">Strawberry</option>
+                        <option id="dessert2-2">Chocolate</option>
+                        <option id="dessert3-2">Vanilla</option>
+                    </select>
+                    </div>
+                </section>
+            </section>
+            <input id="send" type="submit" value="SEND">
+        </form>
+    </main>
+    <footer>Contact Us: harveysmith0218@gmail.com</footer>
+    <script src="./script.js"></script>
+    <script src="./food.js"></script>
+</body>
+
+</html>
